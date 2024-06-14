@@ -4,6 +4,9 @@
 #include <sys/wait.h>
 #include <pthread.h>
 
+//Noice Project :)))))))))
+
+
 void* print_thread_info(void *depth) {
     int current_depth = *((int *)depth);
     pthread_t tid = pthread_self();
@@ -50,7 +53,7 @@ void create_process_and_thread(int depth, int current_depth) {
 }
 
 int main() {
-    printf("Main Process ID: %d\n", getpid());
+    printf("Parent Process ID: %d\n", getpid());
     int main_depth = 0; 
     print_thread_info(&main_depth); 
     create_process_and_thread(6, 0); 
